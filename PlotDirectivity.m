@@ -15,8 +15,10 @@ function PlotDirectivity( thita, y, M0, colorname, xlab0, ylab0 )
 % --------------ChengLong----20160925-------FAEL------------------------
 % --------------E-mail: Long.Cheng@buaa.edu.cn--------------------------
 %%
-x1 = y * cos( thita );
-y1 = y * sin( thita );
+for i = 1:length(thita)
+    x1(i) = y(i) * cos( thita(i) );
+    y1(i) = y(i) * sin( thita(i) );
+end
 %% 
 % get the scale line
 MaxR = max(y) * 1.1;
